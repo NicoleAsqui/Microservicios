@@ -1,0 +1,38 @@
+# Ignorar archivos generados por el IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.class
+*.log
+*.swp
+*.bak
+*.orig
+
+# Ignorar archivos de Maven
+target/
+*.jar
+*.war
+*.ear
+dependency-reduced-pom.xml
+build/
+
+# Ignorar archivos de logs
+logs/
+
+# Ignorar archivos de configuración local
+application-local.properties
+.env
+
+# Ignorar archivos de la base de datos H2 (si se usan archivos locales)
+*.h2.db
+*.mv.db
+
+# Ignorar archivos de Node.js (si se usa en el futuro)
+node_modules/
+npm-debug.log
+
+# Ignorar archivos de Docker (si se usa en el futuro)
+docker-compose.yml
+Dockerfile
