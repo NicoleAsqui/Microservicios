@@ -14,10 +14,6 @@ public class BookService {
     @Autowired
     private BookRepository bookRepository;
 
-    public List<Book> getAllBooks() {
-        return bookRepository.findAll();
-    }
-
     public Book createBook(Book book) {
         return bookRepository.save(book);
     }
@@ -45,5 +41,37 @@ public class BookService {
 
     public Optional<Book> getBookById(Long id) {
         return bookRepository.findById(id);
+    }
+
+    public Optional<Book> updateBookPartial(Long id, Book bookDetails) {
+        Optional<Book> existingBook = bookRepository.findById(id);
+        if (existingBook.isPresent()) {
+            Book book = existingBook.get();
+
+            if (bookDetails.getTitle() != null) {
+                book.setTitle(bookDetails.getTitle());
+            }
+            if (bookDetails.getAuthor() != null) {
+                book.setAuthor(bookDetails.getAuthor());
+            }
+            if (bookDetails.getPublicationDate() != null) {
+                book.setPublicationDate(bookDetails.getPublicationDate());
+            }
+            if (bookDetails.getCategory() != null) {
+                book.setCategory(bookDetails.getCategory());
+            }
+            if (bookDetails.getIsbn() != null) {
+                book.setIsbn(bookDetails.getIsbn());
+            }
+            if (bookDetails.getRating() != null) {
+                book.setRating(bookDetails.getRating());
+            }
+            if (bookDetails.getVisible() != null) {
+                book.setVisible(bookDetails.getVisible());
+            }
+
+            return Optional.of(bookRepository.save(book));
+        }
+        return Optional.empty();
     }
 }
