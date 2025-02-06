@@ -1,5 +1,6 @@
 package com.relatosdepapel.ms_book_payment.client;
 
+import com.relatosdepapel.ms_book_payment.model.Book;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
