@@ -1,4 +1,4 @@
-package com.relatosdepapel.payments.controller;
+package com.relatosdepapel.ms_book_payment.controller;
 
 import com.relatosdepapel.payments.model.Purchase;
 import com.relatosdepapel.payments.service.PaymentService;
