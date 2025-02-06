@@ -1,5 +1,6 @@
 package com.relatosdepapel.ms_books_catalog.controller;
 
+import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
@@ -23,5 +24,15 @@ public class GlobalExceptionHandler {
         }
 
         return new ResponseEntity<>(errorMessages.toString().trim(), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(EntityNotFoundException.class)
+    public ResponseEntity<Object> handleEntityNotFoundException(EntityNotFoundException ex) {
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<Object> handleGlobalException(Exception ex) {
+        return new ResponseEntity<>("Ocurrió un error inesperado. Por favor, inténtalo más tarde.", HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
