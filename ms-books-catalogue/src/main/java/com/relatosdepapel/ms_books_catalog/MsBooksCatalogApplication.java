@@ -1,14 +1,13 @@
-package com.relatosdepapel.ms_books_catalogue;
+package com.relatosdepapel.ms_books_catalog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MsBooksCatalogueApplication {
+public class MsBooksCatalogApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MsBooksCatalogueApplication.class, args);
+		SpringApplication.run(MsBooksCatalogApplication.class, args);
 	}
-
 
 }
