@@ -25,6 +25,7 @@
         <module>ms-books-catalogue</module>
         <module>ms-books-payments</module>
         <module>api-gateway</module>
+        <module>eureka-server</module>
     </modules>
 
     <dependencies>

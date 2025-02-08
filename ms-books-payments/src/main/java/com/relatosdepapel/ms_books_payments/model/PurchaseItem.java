@@ -1,4 +1,4 @@
-package com.relatosdepapel.ms_book_payment.model;
+package com.relatosdepapel.ms_books_payments.model;
 
 import jakarta.persistence.*;
 

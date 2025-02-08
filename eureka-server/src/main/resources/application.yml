@@ -1,0 +1,20 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka-server
+
+  cloud:
+    eureka:
+      client:
+        fetch-registry: false
+        register-with-eureka: false  # El servidor Eureka no se registra a sí mismo
+      server:
+        enable-self-preservation: false  # Desactiva la preservación automática para evitar que el servidor no pueda eliminar instancias
+        eviction-interval-timer-in-ms: 5000  # Tiempo en milisegundos para evicción de registros caducados
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/  # La URL donde Eureka escucha, asegúrate de que esta URL coincida
