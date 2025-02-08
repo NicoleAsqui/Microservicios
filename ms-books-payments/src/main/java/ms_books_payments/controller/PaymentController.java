@@ -1,8 +1,8 @@
-package com.relatosdepapel.ms_books_payments.controller;
+package ms_books_payments.controller;
 
 
-import com.relatosdepapel.ms_books_payments.model.Purchase;
-import com.relatosdepapel.ms_books_payments.service.PaymentService;
+import ms_books_payments.model.Purchase;
+import ms_books_payments.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package com.relatosdepapel.ms_books_payments.model;
+package ms_books_payments.model;
 
 import jakarta.persistence.*;
 import java.util.Date;

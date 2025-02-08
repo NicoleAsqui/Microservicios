@@ -1,4 +1,4 @@
-package com.relatosdepapel.ms_books_payments;
+package ms_books_payments;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

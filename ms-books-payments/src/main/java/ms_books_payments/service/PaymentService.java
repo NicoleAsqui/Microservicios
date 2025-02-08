@@ -1,8 +1,8 @@
-package com.relatosdepapel.ms_books_payments.service;
+package ms_books_payments.service;
 
-import com.relatosdepapel.ms_books_payments.client.BookClient;
-import com.relatosdepapel.ms_books_payments.model.Purchase;
-import com.relatosdepapel.ms_books_payments.repository.PurchaseRepository;
+import ms_books_payments.client.BookClient;
+import ms_books_payments.model.Purchase;
+import ms_books_payments.repository.PurchaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
