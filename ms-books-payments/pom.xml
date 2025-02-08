@@ -19,6 +19,12 @@
     </properties>
 
     <dependencies>
+
+        <!-- Dependencia para OpenFeign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
         <!-- Spring Boot dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -40,10 +46,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
         <!-- Database and Dev tools dependencies -->
         <dependency>
