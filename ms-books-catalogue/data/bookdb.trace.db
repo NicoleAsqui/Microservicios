@@ -1,0 +1,15 @@
+2025-02-05 20:52:06.061599-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOK" not found (this database is empty); SQL statement:
+select b1_0.id,b1_0.author,b1_0.category,b1_0.isbn,b1_0.publication_date,b1_0.rating,b1_0.title,b1_0.visible from book b1_0 [42104-232]
+2025-02-05 20:52:09.365853-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOK" not found (this database is empty); SQL statement:
+select b1_0.id,b1_0.author,b1_0.category,b1_0.isbn,b1_0.publication_date,b1_0.rating,b1_0.title,b1_0.visible from book b1_0 [42104-232]
+2025-02-05 20:52:11.623084-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOK" not found (this database is empty); SQL statement:
+select b1_0.id,b1_0.author,b1_0.category,b1_0.isbn,b1_0.publication_date,b1_0.rating,b1_0.title,b1_0.visible from book b1_0 [42104-232]
+2025-02-05 20:52:11.766161-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOK" not found (this database is empty); SQL statement:
+select b1_0.id,b1_0.author,b1_0.category,b1_0.isbn,b1_0.publication_date,b1_0.rating,b1_0.title,b1_0.visible from book b1_0 [42104-232]
+2025-02-05 20:52:11.888954-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOK" not found (this database is empty); SQL statement:
+select b1_0.id,b1_0.author,b1_0.category,b1_0.isbn,b1_0.publication_date,b1_0.rating,b1_0.title,b1_0.visible from book b1_0 [42104-232]
