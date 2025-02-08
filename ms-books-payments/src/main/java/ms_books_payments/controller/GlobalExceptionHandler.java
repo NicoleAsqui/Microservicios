@@ -1,4 +1,4 @@
-package com.relatosdepapel.ms_books_payments.controller;
+package ms_books_payments.controller;
 
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.ConstraintViolationException;

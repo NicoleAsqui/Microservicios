@@ -1,7 +1,7 @@
 package ms_books_payments.service;
 
-import com.relatosdepapel.ms_books_payments.model.Payment;
-import com.relatosdepapel.ms_books_payments.repository.PaymentRepository;
+import ms_books_payments.model.Payment;
+import ms_books_payments.repository.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;

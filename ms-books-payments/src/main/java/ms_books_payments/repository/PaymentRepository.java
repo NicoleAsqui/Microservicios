@@ -1,6 +1,6 @@
-package com.relatosdepapel.ms_books_payments.repository;
+package ms_books_payments.repository;
 
-import com.relatosdepapel.ms_books_payments.model.Payment;
+import ms_books_payments.model.Payment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
