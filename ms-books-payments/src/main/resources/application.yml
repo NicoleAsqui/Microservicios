@@ -27,11 +27,9 @@ spring:
       client:
         serviceUrl:
           defaultZone: http://localhost:8761/eureka/
-      instance:
-        prefer-ip-address: false
+
 
 eureka:
   client:
-    enabled: true
-    register-with-eureka: true
-    fetch-registry: true
+    register-with-eureka: true  # Asegúrate de que el microservicio se registre en Eureka
+    fetch-registry: true  # Habilita la consulta del registro de Eureka
