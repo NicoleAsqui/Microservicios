@@ -3,14 +3,12 @@ server:
 
 spring:
   application:
-    name: ms-books-payments
+    name: ms-books-payment
   datasource:
     url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
     username: sa
     password: password
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
   h2:
     console:
       enabled: true
@@ -30,6 +28,14 @@ spring:
 
 
 eureka:
+  instance:
+    hostname: localhost  # 👈 Usa localhost en vez de la IP
+    prefer-ip-address: false  # 👈 Usa el hostname en vez de la IP
   client:
     register-with-eureka: true  # Asegúrate de que el microservicio se registre en Eureka
     fetch-registry: true  # Habilita la consulta del registro de Eureka
+
+logging:
+  level:
+    com.netflix.eureka: DEBUG
+    com.netflix.discovery: DEBUG

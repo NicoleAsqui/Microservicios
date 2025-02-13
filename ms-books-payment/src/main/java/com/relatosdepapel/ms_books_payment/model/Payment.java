@@ -1,4 +1,4 @@
-package ms_books_payments.model;
+package com.relatosdepapel.ms_books_payments.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;

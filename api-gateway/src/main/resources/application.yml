@@ -23,8 +23,8 @@ spring:
           uri: lb://ms-books-catalogue  # Usa el nombre del servicio registrado en Eureka
           predicates:
             - Path=/api/books/**
-        - id: ms-books-payments
-          uri: lb://ms-books-payments  # Igualmente, el nombre del servicio en Eureka
+        - id: ms-books-payment
+          uri: lb://ms-books-payment  # Igualmente, el nombre del servicio en Eureka
           predicates:
             - Path=/api/payments/**
     management:

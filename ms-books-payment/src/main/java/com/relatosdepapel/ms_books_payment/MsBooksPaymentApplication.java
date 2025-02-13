@@ -1,4 +1,4 @@
-package ms_books_payments;
+package com.relatosdepapel.ms_books_payments;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class MsBooksPaymentsApplication {
+public class MsBooksPaymentApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MsBooksPaymentsApplication.class, args);
+        SpringApplication.run(MsBooksPaymentApplication.class, args);
     }
 
     @Bean

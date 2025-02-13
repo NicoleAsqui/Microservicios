@@ -7,7 +7,7 @@ Este repositorio contiene la implementación del back-end de una aplicación web
 El proyecto está organizado en los siguientes módulos:
 
 1. **`ms-books-catalogue`**: Microservicio encargado de gestionar el catálogo de libros.
-2. **`ms-books-payments`**: Microservicio encargado de gestionar los pagos y compras de libros.
+2. **`ms-books-payment`**: Microservicio encargado de gestionar los pagos y compras de libros.
 3. **`eureka-server`**: Servidor de descubrimiento para registrar y localizar microservicios.
 4. **`api-gateway`**: API Gateway que actúa como punto de entrada único para todas las solicitudes del cliente.
 

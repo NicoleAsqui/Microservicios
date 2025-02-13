@@ -1,10 +1,10 @@
-package com.example.ms_books_payments;
+package com.relatosdepapel.ms_books_payment;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MsBooksPaymentsApplicationTests {
+class MsBooksPaymentApplicationTests {
 
 	@Test
 	void contextLoads() {
