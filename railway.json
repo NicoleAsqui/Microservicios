@@ -1,0 +1,20 @@
+{
+  "services": {
+    "ms-books-catalogue": {
+      "buildCommand": "mvn clean package -DskipTests && docker build -t ms-books-catalogue -f ms-books-catalogue/Dockerfile .",
+      "startCommand": "docker run -p 8081:8081 ms-books-catalogue"
+    },
+    "ms-books-payment": {
+      "buildCommand": "mvn clean package -DskipTests && docker build -t ms-books-payment -f ms-books-payment/Dockerfile .",
+      "startCommand": "docker run -p 8082:8082 ms-books-payment"
+    },
+    "api-gateway": {
+      "buildCommand": "mvn clean package -DskipTests && docker build -t api-gateway -f api-gateway/Dockerfile .",
+      "startCommand": "docker run -p 8080:8080 api-gateway"
+    },
+    "eureka-server": {
+      "buildCommand": "mvn clean package -DskipTests && docker build -t eureka-server -f eureka-server/Dockerfile .",
+      "startCommand": "docker run -p 8761:8761 eureka-server"
+    }
+  }
+}
