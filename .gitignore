@@ -32,7 +32,3 @@ application-local.properties
 # Ignorar archivos de Node.js (si se usa en el futuro)
 node_modules/
 npm-debug.log
-
-# Ignorar archivos de Docker (si se usa en el futuro)
-docker-compose.yml
-Dockerfile

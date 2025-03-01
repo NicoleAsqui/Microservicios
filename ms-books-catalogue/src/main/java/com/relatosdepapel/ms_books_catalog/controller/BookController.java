@@ -7,56 +7,83 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/books")
 public class BookController {
 
+    private final BookService bookService;
+
     @Autowired
-    private BookService bookService;
-
-    @GetMapping
-    public List<Book> getAllBooks(
-            @RequestParam(required = false) String title,
-            @RequestParam(required = false) String author,
-            @RequestParam(required = false) String category,
-            @RequestParam(required = false) String isbn,
-            @RequestParam(required = false) Double rating,
-            @RequestParam(required = false) Boolean visible
-    ) {
-        return bookService.searchBooks(title, author, category, isbn, rating, visible);
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<Book> getBookById(@PathVariable Long id) {
-        return bookService
-                .getBookById(id)
-                .map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.notFound().build());
+    public BookController(BookService bookService) {
+        this.bookService = bookService;
     }
 
     @PostMapping
-    public Book createBook(@RequestBody Book book) {
-        return bookService.createBook(book);
+    public ResponseEntity<Book> createBook(@RequestBody Book book) {
+        Book savedBook = bookService.saveBook(book);
+        return ResponseEntity.ok(savedBook);
     }
 
-    @PutMapping("/{id}")
-    public Book updateBook(@PathVariable Long id, @RequestBody Book bookDetails) {
-        return bookService.updateBook(id, bookDetails);
+    @GetMapping("/search")
+    public ResponseEntity<List<Book>> searchBooks(@RequestParam String query) {
+        List<Book> books = bookService.searchBooks(query);
+        return ResponseEntity.ok(books);
     }
 
-    @PatchMapping("/{id}")
-    public ResponseEntity<Book> updateBookPartial(@PathVariable Long id, @RequestBody Book bookDetails) {
-        Optional<Book> updatedBook = bookService.updateBookPartial(id, bookDetails);
-        return updatedBook
-                .map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.notFound().build());
+    @GetMapping("/suggest")
+    public ResponseEntity<List<String>> suggestTitles(@RequestParam String prefix) {
+        List<String> suggestions = bookService.suggestTitles(prefix);
+        return ResponseEntity.ok(suggestions);
+    }
+
+    @GetMapping("/facets")
+    public ResponseEntity<Map<String, Long>> getFacets() {
+        Map<String, Long> facets = bookService.getFacets();
+        return ResponseEntity.ok(facets);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Book> findBookById(@PathVariable String id) {
+        Optional<Book> book = bookService.findBookById(id);
+        return book.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/title/{title}")
+    public ResponseEntity<List<Book>> findBooksByTitle(@PathVariable String title) {
+        List<Book> books = bookService.findBooksByTitle(title);
+        return ResponseEntity.ok(books);
+    }
+
+    @GetMapping("/author/{author}")
+    public ResponseEntity<List<Book>> findBooksByAuthor(@PathVariable String author) {
+        List<Book> books = bookService.findBooksByAuthor(author);
+        return ResponseEntity.ok(books);
+    }
+
+    @GetMapping("/category/{category}")
+    public ResponseEntity<List<Book>> findBooksByCategory(@PathVariable String category) {
+        List<Book> books = bookService.findBooksByCategory(category);
+        return ResponseEntity.ok(books);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteBook(@PathVariable Long id) {
-        bookService.deleteBook(id);
+    public ResponseEntity<Void> deleteBookById(@PathVariable String id) {
+        bookService.deleteBookById(id);
+        return ResponseEntity.noContent().build();
     }
 
+    @GetMapping
+    public ResponseEntity<List<Book>> getAllBooks() {
+        List<Book> books = bookService.findAllBooks();
+        return ResponseEntity.ok(books);
+    }
+
+    @GetMapping("/generate-test-data")
+    public ResponseEntity<String> generateTestData() {
+        bookService.generateTestData();
+        return ResponseEntity.ok("Datos de prueba generados exitosamente");
+    }
 }
