@@ -1,6 +1,7 @@
 FROM eclipse-temurin:17-jdk
-VOLUME /tmp
-ADD target/eureka-server-0.0.1-SNAPSHOT.jar /eureka-server.jar
-RUN chmod +x /eureka-server.jar
-ENTRYPOINT ["java", "-jar", "/eureka-server.jar"]
+WORKDIR /app
+COPY target/eureka-server-0.0.1-SNAPSHOT.jar /app/app.jar
+RUN chmod +x /app/app.jar
+RUN ls -l /app
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
 EXPOSE 8761
