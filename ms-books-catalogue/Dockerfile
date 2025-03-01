@@ -1,4 +1,4 @@
 FROM eclipse-temurin:17-jdk
 
-ADD target/ms-books-catalogue-0.0.1-SNAPSHOT.jar ms-books-catalogue.jar
+COPY target/ms-books-catalogue-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java", "-jar", "/app.jar"]
