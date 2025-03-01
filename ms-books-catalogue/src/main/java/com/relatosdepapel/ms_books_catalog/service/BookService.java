@@ -105,7 +105,7 @@ public class BookService {
 
     public void generateTestData() {
         List<Book> books = new ArrayList<>();
-        for (int i = 1; i <= 1000; i++) {
+        for (int i = 1; i <= 50; i++) {
             Book book = new Book();
             book.setId(String.valueOf(i));
             book.setTitle("Libro de prueba " + i);
