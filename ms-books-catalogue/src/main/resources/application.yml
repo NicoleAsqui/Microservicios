@@ -28,7 +28,23 @@ spring:
         serviceUrl:
           defaultZone: http://localhost:8761/eureka/
 
+
+  elasticsearch:
+    rest:
+      uris: https://9dn9zua31l:e0hkffuhr3@relatos-papel-search-7169370453.us-east-1.bonsai.io
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+      client:
+        reactive:
+          endpoints: relatos-papel-search-7169370453.us-east-1.bonsaisearch.net:443
+
 eureka:
   client:
     register-with-eureka: true  # Asegúrate de que el microservicio se registre en Eureka
     fetch-registry: true  # Habilita la consulta del registro de Eureka
+management:
+  health:
+    elasticsearch:
+      enabled: false  # Deshabilita el indicador de salud de Elasticsearch
