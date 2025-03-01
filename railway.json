@@ -1,5 +1,23 @@
 {
   "build": {
     "builder": "DOCKERFILE"
+  },
+  "services": {
+    "ms-books-catalogue": {
+      "path": "ms-books-catalogue",
+      "dockerfile": "Dockerfile"
+    },
+    "ms-books-payment": {
+      "path": "ms-books-payment",
+      "dockerfile": "Dockerfile"
+    },
+    "api-gateway": {
+      "path": "api-gateway",
+      "dockerfile": "Dockerfile"
+    },
+    "eureka-server": {
+      "path": "eureka-server",
+      "dockerfile": "Dockerfile"
+    }
   }
 }
