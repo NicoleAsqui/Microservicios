@@ -1,27 +1,5 @@
 {
   "build": {
     "builder": "DOCKERFILE"
-  },
-  "services": {
-    "ms-books-catalogue": {
-      "path": "ms-books-catalogue",
-      "dockerfile": "ms-books-catalogue/Dockerfile",
-      "startCommand": "java -jar /app/app.jar"
-    },
-    "ms-books-payment": {
-      "path": "ms-books-payment",
-      "dockerfile": "ms-books-payment/Dockerfile",
-      "startCommand": "java -jar /app/app.jar"
-    },
-    "api-gateway": {
-      "path": "api-gateway",
-      "dockerfile": "api-gateway/Dockerfile",
-      "startCommand": "java -jar /app/app.jar"
-    },
-    "eureka-server": {
-      "path": "eureka-server",
-      "dockerfile": "eureka-server/Dockerfile",
-      "startCommand": "java -jar /app/app.jar"
-    }
   }
 }
